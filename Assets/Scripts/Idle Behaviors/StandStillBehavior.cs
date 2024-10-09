@@ -6,6 +6,6 @@ public class StandStillBehavior : MonoBehaviour, IIdleBehavior
 {
     public void Idle()
     {
-        Debug.Log("Стою на месте!");
+        Debug.Log("Я стою на месте!");
     }
 }
