@@ -1,11 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class StalkingBehavior : MonoBehaviour, IActiveBehavior
+public class StalkingBehavior : Enemy, IActiveBehavior
 {
-    public void Activate()
+    public void ActivateState()
     {
         Debug.Log("Я преследую!");
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        throw new System.NotImplementedException();
     }
 }

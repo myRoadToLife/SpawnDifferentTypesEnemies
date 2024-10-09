@@ -1,4 +1,4 @@
-public enum EnemyActiveBehavior
+public enum EnemyActiveBehaviorType
 {
     Stalking,
     Flee,

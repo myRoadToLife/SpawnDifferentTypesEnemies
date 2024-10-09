@@ -11,19 +11,19 @@ public class Enemy : MonoBehaviour
         activeBehavior = active;
     }
 
-    public void PerformIdle()
-    {
-        if (idleBehavior != null)
-        {
-            idleBehavior.Idle();
-        }
-    }
+    //public void PerformIdle()
+    //{
+    //    if (idleBehavior != null)
+    //    {
+    //        idleBehavior.IdleState();
+    //    }
+    //}
 
-    public void PerformActive()
-    {
-        if (activeBehavior != null)
-        {
-            activeBehavior.Activate();
-        }
-    }
+    //public void PerformActive()
+    //{
+    //    if (activeBehavior != null)
+    //    {
+    //        activeBehavior.ActivateState();
+    //    }
+    //}
 }

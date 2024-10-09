@@ -1,4 +1,4 @@
 public interface IIdleBehavior
 {
-   public void Idle();
+   public void IdleState();
 }

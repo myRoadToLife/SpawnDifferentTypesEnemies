@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class PatrolBehavior : MonoBehaviour, IIdleBehavior
+public class PatrolBehavior : Enemy, IIdleBehavior
 {
-    public void Idle()
+    public void IdleState()
     {
         Debug.Log("Я патрулирую.");
     }

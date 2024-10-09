@@ -1,4 +1,4 @@
-public enum EnemyIdleBehavior
+public enum EnemyIdleBehaviorType
 {
     StandStill,
     Patrol,

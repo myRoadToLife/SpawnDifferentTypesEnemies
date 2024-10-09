@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public interface IActiveBehavior
 {
-    public void Activate();
+    public void ActivateState();
+    public void OnTriggerEnter(Collider other);
 }
