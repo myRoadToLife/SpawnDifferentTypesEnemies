@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18aa773866c5014aaacf967122da8b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerTransform: {fileID: 1454911752674602928, guid: 251100e4f3453304ca9d08ac6fb4564a, type: 3}
 --- !u!135 &7318828146573438277
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -65,7 +66,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5236668
+  m_Radius: 1.2041738
   m_Center: {x: 0, y: 0, z: -0.023666799}
 --- !u!1 &6345671496559510152
 GameObject:
@@ -128,7 +129,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 27a8e214dadf2684986ab92c7b0c17c1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

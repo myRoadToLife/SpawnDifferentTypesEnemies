@@ -44,6 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fb109cc798ebe3408420be6a550ebd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _idleType: 1
+  _activeType: 1
+  _player: {fileID: 0}
   _enemyPrefab: {fileID: 6639450277307829353, guid: 84a85c27f56f80d41880870d3f108778, type: 3}
-  _idleType: 0
-  _activeType: 0
+  _enemySpeed: 15
+  _enemyDieEffectPrefab: {fileID: 3591960552933666347, guid: f1fc8a714c4459549a7f3dbfcc6c4c21, type: 3}
+  _patrolPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _slowDownRate: 5

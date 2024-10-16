@@ -1,19 +1,24 @@
 using UnityEngine;
 
-public class DieOnContactBehavior : Enemy, IActiveBehavior
+public class DieOnContactBehavior : IActiveBehavior
 {
-    public void ActivateState()
+    private GameObject _enemyObject;
+    private GameObject _enemyDieEffectPrefab;
+
+    public DieOnContactBehavior(GameObject enemyObject, GameObject enemyDieEffect)
     {
-        Debug.Log("Я умираю!");
-        Destroy(gameObject);
+        _enemyObject = enemyObject;
+        _enemyDieEffectPrefab = enemyDieEffect;
     }
 
-    public void OnTriggerEnter(Collider other)
+    public void ActiveAction()
     {
-        Player player = other.GetComponent<Player>();
-        if (player != null)
+        if (_enemyDieEffectPrefab != null)
         {
-            ActivateState();
+            GameObject particles = Object.Instantiate(_enemyDieEffectPrefab, _enemyObject.transform.position, Quaternion.identity);
+
+            Object.Destroy(_enemyObject);
         }
     }
+
 }

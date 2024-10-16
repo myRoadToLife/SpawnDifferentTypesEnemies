@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class StandStillBehavior : Enemy, IIdleBehavior
+public class StandStillBehavior : IIdleBehavior
 {
-    public void IdleState()
+    public void IdleAction()
     {
-        Debug.Log("Я стою на месте!");
+        Debug.Log("Я остаюсь на месте!");
     }
 }
