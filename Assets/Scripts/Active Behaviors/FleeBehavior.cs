@@ -5,12 +5,11 @@ public class FleeBehavior : IActiveBehavior
     private Transform _player;
     private Transform _enemyTransform;
 
-    private float _fleeSpeed = 0.5f;
-    public FleeBehavior(Transform player, Transform enemy, float fleeSpeed)
+    private float _fleeSpeed = 3f;
+    public FleeBehavior(Transform player, Transform enemy)
     {
         _player = player;
         _enemyTransform = enemy;
-        _fleeSpeed = fleeSpeed;
     }
 
     public void ActiveAction()

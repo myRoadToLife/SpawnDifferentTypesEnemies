@@ -7,7 +7,6 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField] private Player _player;
     [SerializeField] private Enemy _enemyPrefab;
-    [SerializeField] private float _enemySpeed;
 
     [SerializeField] private ParticleSystem _enemyDieEffectPrefab;
 
@@ -50,7 +49,7 @@ public class EnemySpawner : MonoBehaviour
                 _activeBehavior = new StalkingBehavior(_player.transform, enemy.transform);
                 break;
             case EnemyActiveBehaviorType.Flee:
-                _activeBehavior = new FleeBehavior(_player.transform, enemy.transform, _enemySpeed);
+                _activeBehavior = new FleeBehavior(_player.transform, enemy.transform);
                 break;
             case EnemyActiveBehaviorType.DieOnContact:
                 _activeBehavior = new DieOnContactBehavior(enemy.gameObject, _enemyDieEffectPrefab.gameObject);

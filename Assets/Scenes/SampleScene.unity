@@ -343,6 +343,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6999231357277276542, guid: 235cb195ec5ba5447bcb6eaa611adddf, type: 3}
+      propertyPath: _enemySpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6999231357277276542, guid: 235cb195ec5ba5447bcb6eaa611adddf, type: 3}
       propertyPath: _patrolPoints.Array.data[0]
       value: 
       objectReference: {fileID: 217227068}
