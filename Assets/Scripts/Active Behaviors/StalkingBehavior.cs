@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class StalkingBehavior : IActiveBehavior
+public class StalkingBehavior : IBehavior
 {
     private float _moveSpeed = 5f;
     private float _stopDistance = 1f;
@@ -15,11 +15,9 @@ public class StalkingBehavior : IActiveBehavior
         _player = player;
         _enemy = enemy;
     }
-    public void ActiveAction()
+    public void Update()
     {
         ChasePlayer();
-
-        Debug.Log("Я преследую!");
     }
 
     void ChasePlayer()

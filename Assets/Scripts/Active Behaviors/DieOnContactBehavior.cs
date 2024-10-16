@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DieOnContactBehavior : IActiveBehavior
+public class DieOnContactBehavior : IBehavior
 {
     private GameObject _enemyObject;
     private GameObject _enemyDieEffectPrefab;
@@ -11,7 +11,7 @@ public class DieOnContactBehavior : IActiveBehavior
         _enemyDieEffectPrefab = enemyDieEffect;
     }
 
-    public void ActiveAction()
+    public void Update()
     {
         if (_enemyDieEffectPrefab != null)
         {

@@ -1,9 +1,8 @@
 using UnityEngine;
 
-public class StandStillBehavior : IIdleBehavior
+public class StandStillBehavior : IBehavior
 {
-    public void IdleAction()
+    public void Update()
     {
-        Debug.Log("Я остаюсь на месте!");
     }
 }

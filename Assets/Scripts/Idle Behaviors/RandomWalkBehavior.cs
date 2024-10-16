@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class RandomWalkBehavior : IIdleBehavior
+public class RandomWalkBehavior : IBehavior
 {
-    private float _patrolRadius = 10f;       // Радиус, в пределах которого генерируются точки патрулирования
+    private float _patrolRadius = 6f;       // Радиус, в пределах которого генерируются точки патрулирования
     private float _moveSpeed = 3f;           // Скорость перемещения врага
     private float _pointReachThreshold = 0.5f; // Расстояние, при котором считается, что враг достиг точки
 
@@ -16,7 +16,7 @@ public class RandomWalkBehavior : IIdleBehavior
         GenerateNewTargetPoint();
     }
 
-    public void IdleAction()
+    public void Update()
     {
         Patrol();
     }

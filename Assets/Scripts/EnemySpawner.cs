@@ -2,19 +2,22 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    [Header("EnumeType")]
     [SerializeField] private EnemyIdleBehaviorType _idleType;
     [SerializeField] private EnemyActiveBehaviorType _activeType;
 
+    [Header("Elements")]
     [SerializeField] private Player _player;
     [SerializeField] private Enemy _enemyPrefab;
 
+    [Header("Effects")]
     [SerializeField] private ParticleSystem _enemyDieEffectPrefab;
 
+    [Header("PointsPatrol")]
     [SerializeField] private Transform[] _patrolPoints;
 
-    private IIdleBehavior _idleBehavior;
-    private IActiveBehavior _activeBehavior;
-    [SerializeField] private float _slowDownRate;
+    private IBehavior _activeBehavior;
+    private IBehavior _idleBehavior;
 
     private void Update()
     {

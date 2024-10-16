@@ -2,43 +2,42 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    private IIdleBehavior _idleBehavior;
-    private IActiveBehavior _activeBehavior;
+    private IBehavior _activeBehavior;
+    private IBehavior _idleBehavior;
+    private IBehavior _currentBehavior;
 
-    private bool _isActive = false;
-
-    public void Initialize(IIdleBehavior idle, IActiveBehavior active)
+    public void Initialize(IBehavior idleBehavior, IBehavior activeBehavior)
     {
-        _idleBehavior = idle;
-        _activeBehavior = active;
+        _idleBehavior = idleBehavior;
+        _activeBehavior = activeBehavior;
+        InitializingBehavior();
+    }
+
+    private void InitializingBehavior()
+    {
+        _currentBehavior = _idleBehavior;
     }
 
     private void Update()
     {
-
-        if (_isActive)
-        {
-            _activeBehavior?.ActiveAction();
-        }
-        else
-        {
-            _idleBehavior?.IdleAction();
-        }
+        _currentBehavior?.Update();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent<Player>(out Player player) && !_isActive)
+        if (other.TryGetComponent<Player>(out Player player))
         {
-            _isActive = true;
+            _currentBehavior = null;
+            _currentBehavior = _activeBehavior;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.TryGetComponent<Player>(out Player player) && _isActive)
+        if (other.TryGetComponent<Player>(out Player player))
         {
-            _isActive = false;
+            _currentBehavior = null;
+            _currentBehavior = _idleBehavior;
         }
     }
 
